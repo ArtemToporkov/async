@@ -37,7 +37,7 @@ app.get("/api3/:path", (request, response) => {
     const reqParam = request.params.path;
     if (reqParam === "buh") {
         response.send(getBuh(request.query));
-    } else if (reqParam === "analytics") {
+    } else if (reqParam === "analitics") {
         response.send(getAnalytics(request.query));
     } else if (reqParam === "reqBase") {
         response.send(getReqBase(request.query));

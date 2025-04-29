@@ -24,6 +24,9 @@ function sendRequest(url) {
     return fetch(url)
         .then((response) => {
             if (!response.ok) {
+                if (response.status >= 300) {
+                    alert(`${response.statusCode} ${response.status}` )
+                }
                 throw new Error(`Ошибка...: ${response.status}`);
             }
             return response.json();
